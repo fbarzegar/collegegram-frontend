@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useAppDispatch } from "../store";
-import { getCurrentUser, loginThunk } from "../features/userSlice";
+import { loginThunk } from "../features/userSlice";
 
 export default function Login() {
   const dispatch = useAppDispatch();

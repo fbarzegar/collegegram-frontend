@@ -11,11 +11,13 @@ import Input from "../component/input";
 import gmail from "../assets/icons/gmail.svg";
 import key from "../assets/icons/key.svg";
 import back from "../assets/icons/arrow-back.svg";
-import { useUser } from "../features/hooks";
+import { useUser, useUserStatus } from "../features/hooks";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const status = useUserStatus();
   const user = useUser();
+
   const formik = useFormik({
     initialValues: {
       usernameOrEmail: "",
